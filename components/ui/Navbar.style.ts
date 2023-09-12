@@ -5,8 +5,9 @@ export const NavContainer = styled.div`
   background-color: #161920;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  height: 6vh;
   color: white;
+  padding: 0px 20px;
 `;
 
 export const LeftSection = styled.div`

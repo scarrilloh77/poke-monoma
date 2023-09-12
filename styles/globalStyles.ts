@@ -6,6 +6,12 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
+  font-family: "poppins";
+  background-color: #101217;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #__next {

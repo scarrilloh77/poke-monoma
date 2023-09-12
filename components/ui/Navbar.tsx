@@ -7,10 +7,10 @@ export const Navbar = () => {
     <SC.NavContainer>
       <SC.LeftSection>
         <Image
-          src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/717.png'
+          src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/100.svg'
           alt='poke-icon'
-          width={60}
-          height={60}
+          width={30}
+          height={30}
         />
         <span className='text-3xl font-bold ml-2'>P</span>
         <span className='text-lg mt-2'>okemons</span>
