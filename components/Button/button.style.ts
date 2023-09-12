@@ -18,7 +18,7 @@ export const BtnWrap = styled.button<IProps>`
   height: min-content;
   padding: ${({ padding }) => (padding ? padding : '.5rem 1rem')};
   color: white;
-  background-color: ${({ bgColor }) => (bgColor ? bgColor : '#355fe3')};
+  background-color: ${({ bgColor }) => (bgColor ? bgColor : 'var(--blue)')};
   border-radius: 8px;
   box-shadow: 0px 3px 6px #00000029;
   transition: transform 0.2s linear;

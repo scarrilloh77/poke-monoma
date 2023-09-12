@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../../components/Button/Button';
-import * as SC from './login.style';
+import * as SC from '@/styles/login.style';
 
 type FormData = {
   email: string;
