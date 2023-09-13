@@ -1,27 +1,45 @@
+import React, { useEffect, useRef, useState } from 'react';
 import pokeApi from '@/api/pokeApi';
 import Paginate from '@/components/Paginate/Paginate';
 import { ShopLayout } from '@/components/layouts/DashboardLayout';
 import { PokemonCard } from '@/components/pokemons/PokemonCard';
 import { PokemonData, PokemonListData } from '@/interface';
 import * as SC from '@/styles/dashboard.style';
-import React, { useEffect, useState } from 'react';
 
 const DashboardPage = () => {
-  const [pokemons, setPokemon] = useState<PokemonData[]>([]);
+  const [keeperPokemons, setKeeperPokemons] = useState<PokemonData[]>([]);
+  const [totalPokemons, setTotalPokemons] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+  const isLoadingRef = useRef(false);
+
+  const offset = (currentPage - 1) * 10;
+  const visiblePokemons = keeperPokemons.slice(offset, offset + 10);
 
   useEffect(() => {
+    const offsetPage = currentPage * 10 - 10;
+
+    if (isLoadingRef.current || keeperPokemons.length > offsetPage) {
+      return;
+    }
+
+    isLoadingRef.current = true;
+
     const getPokemonList = async () => {
-      const { data } = await pokeApi.get<PokemonListData>('/pokemons');
-      const { results } = data;
-      setPokemon(results);
+      try {
+        const { data } = await pokeApi.get<PokemonListData>(
+          `/pokemons?offset=${offsetPage}`
+        );
+        const { count, results } = data;
+        setKeeperPokemons((prevPokemons) => [...prevPokemons, ...results]);
+        setTotalPokemons(count);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        isLoadingRef.current = false;
+      }
     };
     getPokemonList().catch(console.error);
-  }, []);
-
-  const paginate = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
+  }, [currentPage, keeperPokemons]);
 
   const previousPage = () => {
     if (currentPage !== 1) {
@@ -30,27 +48,35 @@ const DashboardPage = () => {
   };
 
   const nextPage = () => {
-    if (currentPage !== Math.ceil(10 / 10)) {
+    if (currentPage !== Math.ceil(totalPokemons / 10)) {
       setCurrentPage(currentPage + 1);
     }
   };
 
   return (
     <ShopLayout title='PokeMonoma' pageDescription='Listado de pokemons'>
-      <SC.PokemonList>
-        {pokemons?.map((pokemon, index) => (
-          <PokemonCard key={pokemon.id} pokemon={pokemon} />
-        ))}
-      </SC.PokemonList>
-      <SC.PaginationContainer>
-        <Paginate
-          postsPerPage={3}
-          totalPosts={pokemons.length}
-          paginate={paginate}
-          previousPage={previousPage}
-          nextPage={nextPage}
-        />
-      </SC.PaginationContainer>
+      {!isLoadingRef.current ? (
+        <>
+          <SC.PokemonList>
+            {visiblePokemons?.map((pokemon) => (
+              <PokemonCard key={pokemon.id} pokemon={pokemon} />
+            ))}
+          </SC.PokemonList>
+          <SC.PaginationContainer>
+            <Paginate
+              pokemonsPerPage={10}
+              totalPokemons={totalPokemons}
+              currentPage={currentPage}
+              previousPage={previousPage}
+              nextPage={nextPage}
+            />
+          </SC.PaginationContainer>
+        </>
+      ) : (
+        <>
+          <div style={{ color: 'white' }}>Cargando...</div>
+        </>
+      )}
     </ShopLayout>
   );
 };

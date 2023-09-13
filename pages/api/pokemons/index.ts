@@ -18,5 +18,10 @@ export default function handler(
 }
 
 const getPokemons = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
-  return res.status(200).json(pokemonListData);
+  const offset = parseInt(req.query.offset as string, 10) || 0;
+  const paginatedResults = pokemonListData.results.slice(offset, offset + 10);
+  return res.status(200).json({
+    count: pokemonListData.count,
+    results: paginatedResults,
+  });
 };
