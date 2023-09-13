@@ -1,27 +1,29 @@
-import { FC, useMemo, useState } from 'react';
-import NextLink from 'next/link';
 import * as SC from './PokemonCard.style';
+import { PokemonData } from '@/interface';
 
 interface Props {
-  pokemon: any;
+  pokemon: PokemonData;
 }
 
-export const PokemonCard = () => {
+export const PokemonCard = ({ pokemon }: Props) => {
+  const hectogramToKilogram = (hgWeight: number) => hgWeight / 10;
+
   return (
     <SC.CardContainer>
       <SC.PokeVisual>
         <SC.PokeImage>
-          <SC.Image src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/571.svg' />
+          <SC.Image src={`${pokemon.imgUrl}`} />
         </SC.PokeImage>
         <SC.PokeWeight>
-          <span>53 Kg</span>
+          <span>{hectogramToKilogram(pokemon.weight)} Kg</span>
         </SC.PokeWeight>
       </SC.PokeVisual>
       <SC.PokeInfo>
-        <SC.PokeTitle>Charmander</SC.PokeTitle>
+        <SC.PokeTitle>{pokemon.name}</SC.PokeTitle>
         <SC.PokeMoves>
-          <div>#Fuego</div>
-          <div>#Aire</div>
+          {pokemon.movements?.map((move, index) => (
+            <div key={index}>#{move.name}</div>
+          ))}
         </SC.PokeMoves>
       </SC.PokeInfo>
     </SC.CardContainer>
