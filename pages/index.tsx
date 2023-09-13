@@ -1,6 +1,9 @@
-import { useState } from 'react';
-import * as SC from '@/styles/login.style';
+import { useContext, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import pokeApi from '@/api/pokeApi';
 import { Button } from '@/components/Button/Button';
+import * as SC from '@/styles/login.style';
+import { AuthContext } from '@/context';
 
 type FormData = {
   email: string;
@@ -8,28 +11,28 @@ type FormData = {
 };
 
 const LoginPage = () => {
+  const router = useRouter();
+  const { loginUser } = useContext(AuthContext);
+  const [watchPass, setWatchPass] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     email: '',
     password: '',
   });
 
-  const [watchPass, setWatchPass] = useState(false);
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      router.push('/dashboard');
+    }
+  }, [router]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // const dataToSingIn = {
-    //   email: data.email.trim(),
-    //   password: data.password,
-    // };
-
     try {
-      /*
-      const res = await loginUser(dataToSingIn);
-      login(res.token);
-       */
-      console.log('Bienvenido!');
+      await loginUser(formData.email.trim(), formData.password);
+      router.push('/dashboard');
     } catch (error) {
-      console.log('Credenciales incorrectas!');
+      console.log(error);
     }
   };
 
