@@ -1,0 +1,705 @@
+{
+  "count": 50,
+  "results": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "weight": 69,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+      "movements": [
+        {
+          "name": "razor-wind"
+        },
+        {
+          "name": "swords-dance"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "weight": 130,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
+      "movements": [
+        {
+          "name": "cut"
+        },
+        {
+          "name": "bind"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "weight": 1000,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
+      "movements": [
+        {
+          "name": "vine-whip"
+        },
+        {
+          "name": "headbutt"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "weight": 85,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
+      "movements": [
+        {
+          "name": "mega-punch"
+        },
+        {
+          "name": "fire-punch"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Charmeleon",
+      "weight": 190,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
+      "movements": [
+        {
+          "name": "thunder-punch"
+        },
+        {
+          "name": "scratch"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
+      "weight": 905,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
+      "movements": [
+        {
+          "name": "wing-attack"
+        },
+        {
+          "name": "fly"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "weight": 90,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
+      "movements": [
+        {
+          "name": "ice-punch"
+        },
+        {
+          "name": "mega-kick"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Wartortle",
+      "weight": 225,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg",
+      "movements": [
+        {
+          "name": "headbutt"
+        },
+        {
+          "name": "tackle"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Blastoise",
+      "weight": 855,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg",
+      "movements": [
+        {
+          "name": "body-slam"
+        },
+        {
+          "name": "take-down"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Caterpie",
+      "weight": 29,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg",
+      "movements": [
+        {
+          "name": "string-shot"
+        },
+        {
+          "name": "snore"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Metapod",
+      "weight": 99,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg",
+      "movements": [
+        {
+          "name": "harden"
+        },
+        {
+          "name": "iron-defense"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Butterfree",
+      "weight": 320,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg",
+      "movements": [
+        {
+          "name": "razor-wind"
+        },
+        {
+          "name": "gust"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Weedle",
+      "weight": 32,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg",
+      "movements": [
+        {
+          "name": "poison-sting"
+        },
+        {
+          "name": "string-shot"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Kakuna",
+      "weight": 100,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg",
+      "movements": [
+        {
+          "name": "harden"
+        },
+        {
+          "name": "iron-defense"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Beedrill",
+      "weight": 295,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.svg",
+      "movements": [
+        {
+          "name": "swords-dance"
+        },
+        {
+          "name": "cut"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Pidgey",
+      "weight": 18,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.svg",
+      "movements": [
+        {
+          "name": "wing-attack"
+        },
+        {
+          "name": "whirlwind"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Pidgeotto",
+      "weight": 300,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.svg",
+      "movements": [
+        {
+          "name": "fly"
+        },
+        {
+          "name": "sand-attack"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Pidgeot",
+      "weight": 395,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/18.svg",
+      "movements": [
+        {
+          "name": "gust"
+        },
+        {
+          "name": "headbutt"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Rattata",
+      "weight": 35,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/19.svg",
+      "movements": [
+        {
+          "name": "tackle"
+        },
+        {
+          "name": "body-slam"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Raticate",
+      "weight": 185,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/20.svg",
+      "movements": [
+        {
+          "name": "take-down"
+        },
+        {
+          "name": "double-edge"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Spearow",
+      "weight": 20,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/21.svg",
+      "movements": [
+        {
+          "name": "whirlwind"
+        },
+        {
+          "name": "fury-attack"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Fearow",
+      "weight": 380,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg",
+      "movements": [
+        {
+          "name": "leer"
+        },
+        {
+          "name": "growl"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Ekans",
+      "weight": 69,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.svg",
+      "movements": [
+        {
+          "name": "bind"
+        },
+        {
+          "name": "slam"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Arbok",
+      "weight": 650,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/24.svg",
+      "movements": [
+        {
+          "name": "wrap"
+        },
+        {
+          "name": "poison-sting"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "weight": 60,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg",
+      "movements": [
+        {
+          "name": "mega-punch"
+        },
+        {
+          "name": "pay-day"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Raichu",
+      "weight": 300,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/26.svg",
+      "movements": [
+        {
+          "name": "thunder-punch"
+        },
+        {
+          "name": "slam"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Sandshrew",
+      "weight": 120,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/27.svg",
+      "movements": [
+        {
+          "name": "scratch"
+        },
+        {
+          "name": "cut"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Sandslash",
+      "weight": 295,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/28.svg",
+      "movements": [
+        {
+          "name": "sand-attack"
+        },
+        {
+          "name": "headbutt"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Nidoran-f",
+      "weight": 4,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/29.svg",
+      "movements": [
+        {
+          "name": "double-kick"
+        },
+        {
+          "name": "tackle"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Nidorina",
+      "weight": 200,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg",
+      "movements": [
+        {
+          "name": "tail-whip"
+        },
+        {
+          "name": "horn-drill"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Nidoqueen",
+      "weight": 600,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/31.svg",
+      "movements": [
+        {
+          "name": "thunder-punch"
+        },
+        {
+          "name": "mega-kick"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Nidoran-m",
+      "weight": 5,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/32.svg",
+      "movements": [
+        {
+          "name": "double-kick"
+        },
+        {
+          "name": "horn-attack"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Nidorino",
+      "weight": 195,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/33.svg",
+      "movements": [
+        {
+          "name": "fury-attack"
+        },
+        {
+          "name": "horn-drill"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Nidoking",
+      "weight": 620,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/34.svg",
+      "movements": [
+        {
+          "name": "fury-attack"
+        },
+        {
+          "name": "body-slam"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Clefairy",
+      "weight": 75,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/35.svg",
+      "movements": [
+        {
+          "name": "growl"
+        },
+        {
+          "name": "sing"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Clefable",
+      "weight": 400,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/36.svg",
+      "movements": [
+        {
+          "name": "ice-punch"
+        },
+        {
+          "name": "thunder-punch"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Vulpix",
+      "weight": 99,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/37.svg",
+      "movements": [
+        {
+          "name": "body-slam"
+        },
+        {
+          "name": "take-down"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Ninetales",
+      "weight": 199,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/38.svg",
+      "movements": [
+        {
+          "name": "double-edge"
+        },
+        {
+          "name": "tail-whip"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Jigglypuff",
+      "weight": 55,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/39.svg",
+      "movements": [
+        {
+          "name": "double-slap"
+        },
+        {
+          "name": "mega-punch"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Wigglytuff",
+      "weight": 120,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/40.svg",
+      "movements": [
+        {
+          "name": "mega-kick"
+        },
+        {
+          "name": "headbutt"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Zubat",
+      "weight": 75,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/41.svg",
+      "movements": [
+        {
+          "name": "razor-wind"
+        },
+        {
+          "name": "gust"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Golbat",
+      "weight": 550,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/42.svg",
+      "movements": [
+        {
+          "name": "wing-attack"
+        },
+        {
+          "name": "whirlwind"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Oddish",
+      "weight": 54,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/43.svg",
+      "movements": [
+        {
+          "name": "acid"
+        },
+        {
+          "name": "absorb"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Gloom",
+      "weight": 86,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/44.svg",
+      "movements": [
+        {
+          "name": "cut"
+        },
+        {
+          "name": "take-down"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Vileplume",
+      "weight": 186,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/45.svg",
+      "movements": [
+        {
+          "name": "body-slam"
+        },
+        {
+          "name": "take-down"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Paras",
+      "weight": 54,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/46.svg",
+      "movements": [
+        {
+          "name": "psybeam"
+        },
+        {
+          "name": "counter"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Parasect",
+      "weight": 295,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/47.svg",
+      "movements": [
+        {
+          "name": "hyper-beam"
+        },
+        {
+          "name": "counter"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Venonat",
+      "weight": 300,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/48.svg",
+      "movements": [
+        {
+          "name": "supersonic"
+        },
+        {
+          "name": "disable"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Venomoth",
+      "weight": 125,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/49.svg",
+      "movements": [
+        {
+          "name": "whirlwind"
+        },
+        {
+          "name": "hyper-beam"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Diglett",
+      "weight": 8,
+      "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/50.svg",
+      "movements": [
+        {
+          "name": "growl"
+        },
+        {
+          "name": "earthquake"
+        }
+      ]
+    }
+  ]
+}

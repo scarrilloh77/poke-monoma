@@ -1,5 +1,5 @@
 import * as SC from './PokemonCard.style';
-import { PokemonData } from '@/interface';
+import { PokemonData } from '@/interfaces';
 
 interface Props {
   pokemon: PokemonData;

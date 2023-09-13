@@ -1,6 +1,6 @@
-import { pokemonListData } from '@/database';
-import { PokemonListData } from '@/interface';
+import { PokemonListData } from '@/interfaces';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import pokemonListData from '@/database/pokemons.json';
 
 type Data = { message: string } | PokemonListData;
 
