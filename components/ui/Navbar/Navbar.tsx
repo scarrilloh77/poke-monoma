@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import NextLink from 'next/link';
+import Link from 'next/link';
 import * as SC from './Navbar.style';
+import { DropdownMenu } from '../DropdownMenu/DropdownMenu';
 
 export const Navbar = () => {
   return (
@@ -12,13 +13,13 @@ export const Navbar = () => {
           width={30}
           height={30}
         />
-        <span className='text-3xl font-bold ml-2'>P</span>
-        <span className='text-lg mt-2'>okemons</span>
+        <Link href='/dashboard'>
+          <span className='text-3xl font-bold ml-2'>P</span>
+          <span className='text-lg mt-2'>okemons</span>
+        </Link>
       </SC.LeftSection>
       <SC.RightSection>
-        <NextLink href='/favorites' passHref>
-          <div>Cerrar cesión</div>
-        </NextLink>
+        <DropdownMenu />
       </SC.RightSection>
     </SC.NavContainer>
   );
