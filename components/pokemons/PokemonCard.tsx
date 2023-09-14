@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import * as SC from './PokemonCard.style';
 import { PokemonData } from '@/interfaces';
 
@@ -6,10 +7,15 @@ interface Props {
 }
 
 export const PokemonCard = ({ pokemon }: Props) => {
+  const router = useRouter();
   const hectogramToKilogram = (hgWeight: number) => hgWeight / 10;
 
+  const seeDetail = () => {
+    router.push(`/pokemon/${pokemon.id}`);
+  };
+
   return (
-    <SC.CardContainer>
+    <SC.CardContainer onClick={seeDetail}>
       <SC.PokeVisual>
         <SC.PokeImage>
           <SC.Image src={`${pokemon.imgUrl}`} />

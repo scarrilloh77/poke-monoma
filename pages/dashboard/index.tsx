@@ -10,7 +10,7 @@ import { AuthContext } from '@/context';
 
 const DashboardPage = () => {
   const router = useRouter();
-  const { isLoggedIn, logout } = useContext(AuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
   const [keeperPokemons, setKeeperPokemons] = useState<PokemonData[]>([]);
   const [totalPokemons, setTotalPokemons] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
