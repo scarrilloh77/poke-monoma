@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 export const signToken = (id: string, email: string) =>
-  jwt.sign({ id, email }, 'SeedToken@123', { expiresIn: '3h' });
+  jwt.sign({ id, email }, 'SeedToken@123', { expiresIn: '1h' });
 
 export const isValidToken = (token: string): Promise<string> => {
   return new Promise((resolve, reject) => {
