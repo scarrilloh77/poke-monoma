@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Head from 'next/head';
 import { Navbar } from '../ui/Navbar/Navbar';
+import * as SC from './MainLayout.styles';
 
 interface Props {
   children: React.ReactNode;
@@ -9,7 +10,7 @@ interface Props {
   imageFullUrl?: string;
 }
 
-export const ShopLayout: FC<Props> = ({
+export const MainLayout: FC<Props> = ({
   children,
   title,
   pageDescription,
@@ -24,12 +25,14 @@ export const ShopLayout: FC<Props> = ({
         <meta name='og:description' content={pageDescription} />
         {imageFullUrl && <meta name='og:image' content={imageFullUrl} />}
       </Head>
-      <nav>
-        <Navbar />
-      </nav>
-      <main>
-        <div style={{ height: '94vh' }}>{children}</div>
-      </main>
+      <SC.MainContainer>
+        <nav className='flex'>
+          <Navbar />
+        </nav>
+        <main className='flex flex-auto'>
+          <SC.ContentContainer>{children}</SC.ContentContainer>
+        </main>
+      </SC.MainContainer>
     </>
   );
 };

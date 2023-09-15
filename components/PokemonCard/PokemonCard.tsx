@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import * as SC from './PokemonCard.style';
+import * as SC from './PokemonCard.styles';
 import { PokemonData } from '@/interfaces';
 
 interface Props {

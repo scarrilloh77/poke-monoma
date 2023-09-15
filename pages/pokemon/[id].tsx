@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import axios from 'axios';
 import { Pokemon } from '@/interfaces';
-import * as SC from '../../styles/pokemon-detail.style';
-import { ShopLayout } from '@/components/layouts/DashboardLayout';
+import * as SC from '../../styles/PokemonPage.styles';
+import { MainLayout } from '@/components/layouts/MainLayout';
 import { useRouter } from 'next/router';
 import { AuthContext } from '@/context';
 
@@ -25,7 +25,7 @@ const PokemonPage = ({ pokemon }: Props) => {
   return (
     <>
       {isLoggedIn && (
-        <ShopLayout title='PokeDetail' pageDescription='Detalle del Pokemon'>
+        <MainLayout title='PokeDetail' pageDescription='Detalle del Pokemon'>
           <SC.DetailContainer>
             <SC.DetailVisualContainer>
               <SC.DetailImageContainer>
@@ -72,7 +72,7 @@ const PokemonPage = ({ pokemon }: Props) => {
               </SC.DetailInfoContainer>
             </SC.DetailVisualContainer>
           </SC.DetailContainer>
-        </ShopLayout>
+        </MainLayout>
       )}
     </>
   );

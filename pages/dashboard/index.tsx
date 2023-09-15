@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import pokeApi from '@/api/pokeApi';
 import Paginate from '@/components/Paginate/Paginate';
-import { ShopLayout } from '@/components/layouts/DashboardLayout';
-import { PokemonCard } from '@/components/pokemons/PokemonCard';
+import { MainLayout } from '@/components/layouts/MainLayout';
+import { PokemonCard } from '@/components/PokemonCard/PokemonCard';
 import { PokemonData, PokemonListData } from '@/interfaces';
-import * as SC from '@/styles/dashboard.style';
+import * as SC from '@/styles/DashboardPage.styles';
 import { useRouter } from 'next/router';
 import { AuthContext } from '@/context';
 
@@ -67,30 +67,22 @@ const DashboardPage = () => {
   return (
     <>
       {isLoggedIn && (
-        <ShopLayout title='PokeMonoma' pageDescription='Listado de pokemons'>
-          {!isLoadingRef.current ? (
-            <>
-              <SC.PokemonList>
-                {visiblePokemons?.map((pokemon) => (
-                  <PokemonCard key={pokemon.id} pokemon={pokemon} />
-                ))}
-              </SC.PokemonList>
-              <SC.PaginationContainer>
-                <Paginate
-                  pokemonsPerPage={10}
-                  totalPokemons={totalPokemons}
-                  currentPage={currentPage}
-                  previousPage={previousPage}
-                  nextPage={nextPage}
-                />
-              </SC.PaginationContainer>
-            </>
-          ) : (
-            <>
-              <div style={{ color: 'white' }}>Cargando...</div>
-            </>
-          )}
-        </ShopLayout>
+        <MainLayout title='PokeMonoma' pageDescription='Listado de pokemons'>
+          <SC.PokemonList>
+            {visiblePokemons?.map((pokemon) => (
+              <PokemonCard key={pokemon.id} pokemon={pokemon} />
+            ))}
+          </SC.PokemonList>
+          <SC.PaginationContainer>
+            <Paginate
+              pokemonsPerPage={10}
+              totalPokemons={totalPokemons}
+              currentPage={currentPage}
+              previousPage={previousPage}
+              nextPage={nextPage}
+            />
+          </SC.PaginationContainer>
+        </MainLayout>
       )}
     </>
   );

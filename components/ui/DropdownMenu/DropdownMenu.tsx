@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import * as SC from './DropdownMenu.style';
+import * as SC from './DropdownMenu.styles';
 import { AuthContext } from '@/context';
 
 export const DropdownMenu = () => {

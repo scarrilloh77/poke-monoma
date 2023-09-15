@@ -2,17 +2,16 @@ import styled from 'styled-components';
 
 export const PokemonList = styled.div`
   display: grid;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 290px));
+  max-width: 1600px;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 300px));
-  gap: 30px;
-  padding: 20px 0px;
+  gap: 15px;
+  width: 100%;
 `;
 
 export const PaginationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
   color: white;
 `;

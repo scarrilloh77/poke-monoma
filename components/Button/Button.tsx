@@ -1,4 +1,4 @@
-import * as SC from './button.style';
+import * as SC from './button.styles';
 
 interface IButton {
   children: JSX.Element | string;

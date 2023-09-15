@@ -13,6 +13,7 @@ export const MenuTrigger = styled.div`
     justify-content: center;
     height: 40px;
     width: 40px;
+    font-size: 0.85rem;
     background-color: #000;
     border-radius: 50%;
     overflow: hidden;
@@ -23,8 +24,8 @@ export const MenuTrigger = styled.div`
 
 export const DropdownMenuContainer = styled.div<Props>`
   position: absolute;
-  top: 80px;
-  right: 10px;
+  top: 60px;
+  right: 15px;
   padding: 10px 20px;
   width: 200px;
   background-color: #fff;
@@ -34,7 +35,7 @@ export const DropdownMenuContainer = styled.div<Props>`
   transform: ${({ active }) =>
     active === 'true' ? 'translateY(0)' : 'translateY(-20px)'};
   transition: 250ms ease;
-  ::before {
+  /* ::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -43,7 +44,7 @@ export const DropdownMenuContainer = styled.div<Props>`
     width: 20px;
     background: #fff;
     transform: rotate(45deg);
-  }
+  } */
 `;
 
 export const LoginInfo = styled.h3`

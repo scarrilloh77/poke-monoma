@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import pokeApi from '@/api/pokeApi';
 import { Button } from '@/components/Button/Button';
-import * as SC from '@/styles/login.style';
+import * as SC from '@/styles/LoginPage.styles';
 import { AuthContext } from '@/context';
 
 type FormData = {
