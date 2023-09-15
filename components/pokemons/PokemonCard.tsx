@@ -15,7 +15,10 @@ export const PokemonCard = ({ pokemon }: Props) => {
   };
 
   return (
-    <SC.CardContainer onClick={seeDetail}>
+    <SC.CardContainer
+      onClick={seeDetail}
+      data-testid={`pokemon-card-${pokemon.id}`}
+    >
       <SC.PokeVisual>
         <SC.PokeImage>
           <SC.Image src={`${pokemon.imgUrl}`} />

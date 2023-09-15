@@ -12,7 +12,6 @@ export const DropdownMenu = () => {
     let handler = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         setOpen(false);
-        console.log(menuRef.current);
       }
     };
     document.addEventListener('mousedown', handler);
@@ -22,7 +21,7 @@ export const DropdownMenu = () => {
   });
 
   return (
-    <SC.MenuContainer ref={menuRef}>
+    <SC.MenuContainer ref={menuRef} data-testid='dropdown-menu-button'>
       <SC.MenuTrigger
         onClick={() => {
           setOpen(!open);
@@ -42,7 +41,9 @@ export const DropdownMenu = () => {
         </SC.LoginInfo>
         <ul>
           <SC.DropdownMenuItem>
-            <a onClick={logout}> Logout </a>
+            <a data-testid='logout-button' onClick={logout}>
+              Logout
+            </a>
           </SC.DropdownMenuItem>
         </ul>
       </SC.DropdownMenuContainer>

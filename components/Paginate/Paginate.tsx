@@ -25,7 +25,10 @@ const Paginate = ({
   return (
     <SC.PaginationContainer className='pagination-container'>
       <ul className='pagination'>
-        <SC.ItemPaginationContainer onClick={previousPage}>
+        <SC.ItemPaginationContainer
+          onClick={previousPage}
+          data-testid='paginate-prev'
+        >
           Prev
         </SC.ItemPaginationContainer>
         {pageNumbers.map((number) => {
@@ -39,7 +42,10 @@ const Paginate = ({
             </SC.ItemPaginationContainer>
           );
         })}
-        <SC.ItemPaginationContainer onClick={nextPage}>
+        <SC.ItemPaginationContainer
+          onClick={nextPage}
+          data-testid='paginate-next'
+        >
           Next
         </SC.ItemPaginationContainer>
       </ul>

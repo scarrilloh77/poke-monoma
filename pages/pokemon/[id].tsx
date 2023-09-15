@@ -34,7 +34,7 @@ const PokemonPage = ({ pokemon }: Props) => {
                 />
               </SC.DetailImageContainer>
               <SC.DetailInfoContainer>
-                <SC.DetailNameContainer>
+                <SC.DetailNameContainer data-testid='pokemon-name'>
                   {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
                 </SC.DetailNameContainer>
                 <SC.SmallPropertyContainer>

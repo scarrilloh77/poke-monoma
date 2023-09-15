@@ -13,9 +13,9 @@ export const Navbar = () => {
           width={30}
           height={30}
         />
-        <Link href='/dashboard'>
+        <Link href='/dashboard' data-testid='dashboard-link'>
           <span className='text-3xl font-bold ml-2'>P</span>
-          <span className='text-lg mt-2'>okemons</span>
+          <span className='text-lg mt-2'>okeMonoma</span>
         </Link>
       </SC.LeftSection>
       <SC.RightSection>
