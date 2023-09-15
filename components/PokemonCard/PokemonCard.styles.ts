@@ -4,11 +4,11 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 290px;
+  gap: 10px;
+  background-color: #212530;
   border-radius: 15px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  gap: 10px;
-  background-color: #212530;
 `;
 
 export const PokeVisual = styled.div`
@@ -38,14 +38,13 @@ export const Image = styled.img`
 
 export const PokeWeight = styled.div`
   display: flex;
+  padding: 3px 20px;
+  width: min-content;
+  font-size: 0.85rem;
   color: white;
   background-color: #2c313f;
   border-radius: 50px;
-  font-size: 0.85rem;
-  width: min-content;
   white-space: nowrap;
-  padding: 3px 20px;
-  box-sizing: border-box;
 `;
 
 export const PokeInfo = styled.div`
@@ -55,7 +54,6 @@ export const PokeInfo = styled.div`
   row-gap: 15px;
   color: white;
   background-color: #2c313f;
-  border: 0px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 `;

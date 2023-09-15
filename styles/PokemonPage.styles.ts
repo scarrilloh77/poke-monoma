@@ -32,6 +32,13 @@ export const DetailImageContainer = styled.div`
   justify-content: center;
   padding: 20px;
   width: 100%;
+  height: 275px;
+  @media ${device.tablet} {
+    height: 325px;
+  }
+  @media ${device.laptopL} {
+    height: 700px;
+  }
 `;
 
 export const Image = styled.img`

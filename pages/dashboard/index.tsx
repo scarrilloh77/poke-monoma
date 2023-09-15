@@ -7,6 +7,7 @@ import { PokemonData, PokemonListData } from '@/interfaces';
 import * as SC from '@/styles/DashboardPage.styles';
 import { useRouter } from 'next/router';
 import { AuthContext } from '@/context';
+import SkeletonCard from '@/components/Skeleton/SkeletonCard';
 
 const DashboardPage = () => {
   const router = useRouter();
@@ -14,6 +15,7 @@ const DashboardPage = () => {
   const [keeperPokemons, setKeeperPokemons] = useState<PokemonData[]>([]);
   const [totalPokemons, setTotalPokemons] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loadingPokemons, setLoadingPokemons] = useState(false);
   const isLoadingRef = useRef(false);
 
   const offset = (currentPage - 1) * 10;
@@ -34,6 +36,7 @@ const DashboardPage = () => {
     }
 
     isLoadingRef.current = true;
+    setLoadingPokemons(true);
 
     const getPokemonList = async () => {
       try {
@@ -47,6 +50,7 @@ const DashboardPage = () => {
         console.error(error);
       } finally {
         isLoadingRef.current = false;
+        setLoadingPokemons(false);
       }
     };
     getPokemonList().catch(console.error);
@@ -69,9 +73,13 @@ const DashboardPage = () => {
       {isLoggedIn && (
         <MainLayout title='PokeMonoma' pageDescription='Listado de pokemons'>
           <SC.PokemonList>
-            {visiblePokemons?.map((pokemon) => (
-              <PokemonCard key={pokemon.id} pokemon={pokemon} />
-            ))}
+            {loadingPokemons
+              ? new Array(10)
+                  .fill(0)
+                  .map((_, index) => <SkeletonCard key={index} />)
+              : visiblePokemons?.map((pokemon) => (
+                  <PokemonCard key={pokemon.id} pokemon={pokemon} />
+                ))}
           </SC.PokemonList>
           <SC.PaginationContainer>
             <Paginate
