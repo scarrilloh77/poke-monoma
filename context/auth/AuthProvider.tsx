@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import pokeApi from '@/api/pokeApi';
 import { User } from '@/interfaces';
 import { AuthContext, authReducer } from '.';
-import { AxiosResponse } from 'axios';
+import { errorAlert, successAlert } from '@/utils/alerts';
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -59,8 +59,10 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
       const { token, user } = data;
       localStorage.setItem('token', token);
       dispatch({ type: '[Auth] - Login', payload: user });
+      successAlert('Bienvenido!');
       return true;
     } catch (error) {
+      errorAlert('Credenciales incorrectas!');
       return false;
     }
   };

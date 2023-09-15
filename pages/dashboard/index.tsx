@@ -8,6 +8,7 @@ import * as SC from '@/styles/DashboardPage.styles';
 import { useRouter } from 'next/router';
 import { AuthContext } from '@/context';
 import SkeletonCard from '@/components/Skeleton/SkeletonCard';
+import { Toast } from '@/components/Toast/Toast';
 
 const DashboardPage = () => {
   const router = useRouter();
@@ -90,6 +91,7 @@ const DashboardPage = () => {
               nextPage={nextPage}
             />
           </SC.PaginationContainer>
+          <Toast />
         </MainLayout>
       )}
     </>

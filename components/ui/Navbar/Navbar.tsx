@@ -7,12 +7,7 @@ export const Navbar = () => {
   return (
     <SC.NavContainer>
       <div className='flex'>
-        <Image
-          src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/100.svg'
-          alt='poke-icon'
-          width={30}
-          height={30}
-        />
+        <Image src='/assets/100.svg' height={30} width={30} alt='PokeLogo' />
         <Link href='/dashboard' data-testid='dashboard-link'>
           <span className='text-3xl font-bold ml-2'>P</span>
           <span className='text-lg mt-2'>okeMonoma</span>

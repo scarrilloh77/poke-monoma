@@ -63,7 +63,7 @@ export const Input = styled.input`
   font-size: 15px;
   border-radius: 4px;
   color: white;
-  border-left: 10px #355fe3 solid;
+  border-left: 10px var(--red) solid;
   background-color: #282f3f;
   user-select: none;
 `;
