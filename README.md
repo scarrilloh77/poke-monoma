@@ -1,38 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting Started
 
-## Getting Started
+To get started, follow these steps:
 
-First, run the development server:
+1. **Run the Development Server:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+   Use one of the following commands to start the development server:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. **Customize the Port:**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+   Currently, Next.js does not support port customization directly from a `.env` file. To change the port, you can do so by modifying the `package.json` script as follows:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```json
+   "dev": "next dev -p 3005"
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   Alternatively, you can specify the port in the run command:
 
-## Learn More
+   ```bash
+   npm run dev -- -p 3005
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Update Cypress Configuration:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   If you modify the port, you should also update the port in your `cypress.config.ts` file:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```javascript
+   export default defineConfig({
+     viewportWidth: 1366,
+     viewportHeight: 900,
+     e2e: {
+       testIsolation: false,
+       baseUrl: 'http://localhost:3005', // Update the port here
+       setupNodeEvents(on, config) {
+         // implement node event listeners here
+       },
+     },
+   });
+   ```
 
-## Deploy on Vercel
+   Ensure that the `baseUrl` property in your Cypress configuration matches the port you set in your Next.js development server.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run End-to-End Tests with Cypress:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   To execute end-to-end tests using Cypress, follow these steps:
+
+   - First, ensure that your development server is running by using the command mentioned in step 1.
+
+   - Then, you can run the Cypress tests by executing either of the following commands:
+
+     ```bash
+     npm run cypress
+     # or
+     npx cypress run
+     ```
+
+   Make sure your development server is up and running before initiating the Cypress tests.
